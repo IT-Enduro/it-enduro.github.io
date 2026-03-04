@@ -1,0 +1,36 @@
+{
+  "name": "it-enduro",
+  "private": true,
+  "version": "v1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/exo-2": "^5.2.8",
+    "@mui/icons-material": "^7.0.1",
+    "@mui/material": "^7.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.20.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.0.5"
+  }
+}

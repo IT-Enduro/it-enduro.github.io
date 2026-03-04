@@ -1,0 +1,7 @@
+node_modules
+build
+.github
+services.yml
+docker-compose.yml
+package-lock.json
+vite.config.d.ts

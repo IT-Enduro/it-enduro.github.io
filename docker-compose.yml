@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  landing:
+    build: .
+    container_name: store-frontend
+    ports:
+      - "8880:80"
+    healthcheck:
+      test: "curl --fail http://localhost || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 5
