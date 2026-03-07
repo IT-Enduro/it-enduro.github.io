@@ -38,7 +38,7 @@ const services: ServiceItem[] = [
     ]
   },
   {
-    title: 'ИТ коучинг',
+    title: 'IT коучинг и развитие Soft Skills',
     price: 'от 5000 RUR/час',
     details: [
       'Развитие Soft Skills и навыков самопрезентации.',
@@ -70,30 +70,37 @@ export const ServicesSection = () => (
                 }
               }}
             >
-              <CardContent
-                sx={{ p: 3, display: 'grid', gridTemplateRows: 'auto auto 1fr', gap: 1.4, position: 'relative' }}
-              >
-                <Chip
-                  label={item.price}
-                  color="primary"
-                  size="medium"
+              <CardContent sx={{ p: 3, display: 'grid', gridTemplateRows: 'auto auto 1fr', gap: 1.4 }}>
+                <Box
                   sx={{
-                    position: 'absolute',
-                    top: 26,
-                    right: 24,
-                    fontWeight: 700,
-                    minWidth: 132,
-                    height: 32,
-                    fontSize: 13
+                    display: 'grid',
+                    gridTemplateColumns: { xs: '1fr', md: '1fr auto' },
+                    columnGap: { xs: 0, md: 1.5 },
+                    rowGap: 1
                   }}
-                />
-                <Typography
-                  variant="h5"
-                  fontSize={{ xs: 24, md: 28 }}
-                  sx={{ minHeight: { xs: 0, md: 74 }, pr: { xs: 0, md: 14 } }}
                 >
-                  {item.title}
-                </Typography>
+                  <Typography
+                    variant="h5"
+                    fontSize={{ xs: 24, md: 28 }}
+                    sx={{ order: { xs: 1, md: 0 }, minHeight: { xs: 72, md: 108 }, lineHeight: 1.25 }}
+                  >
+                    {item.title}
+                  </Typography>
+                  <Chip
+                    label={item.price}
+                    color="primary"
+                    size="medium"
+                    sx={{
+                      order: { xs: 0, md: 1 },
+                      justifySelf: 'end',
+                      mt: { xs: 0, md: 0.5 },
+                      fontWeight: 700,
+                      minWidth: 132,
+                      height: 32,
+                      fontSize: 13
+                    }}
+                  />
+                </Box>
 
                 <Box sx={{ minHeight: { xs: 0, md: 38 } }}>
                   <Typography color="text.secondary">Формат: индивидуально или в малой группе.</Typography>

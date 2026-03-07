@@ -33,7 +33,22 @@ const courses: Course[] = [
     badge: '5 недель',
     shortDescription:
       'Практический курс, ориентированный на разработчиков, аналитиков и архитекторов с акцентом на прикладные архитектурные решения.',
-    markdownPath: '/assets/microservices.md'
+    markdownPath: '/docs/microservices.md'
+  },
+  {
+    id: 'frontend',
+    title: 'Курс "Advanced Frontend"',
+    badge: '5 недель',
+    shortDescription: 'Практический онлайн-курс для frontend и fullstack разработчиков.',
+    markdownPath: '/docs/frontend.md'
+  },
+  {
+    id: 'kubernetes',
+    title: 'Интенсив по Kubernetes',
+    badge: '5 часов',
+    shortDescription:
+      'Пятичасовое практическое занятие для разработчиков, QA инженеров, системных администраторов и DevOps.',
+    markdownPath: '/docs/kubernetes.md'
   },
   {
     id: 'docker',
@@ -41,7 +56,7 @@ const courses: Course[] = [
     badge: '3 часа',
     shortDescription:
       'Трехчасовое практическое занятие для разработчиков, QA инженеров, системных администраторов и DevOps.',
-    markdownPath: '/assets/docker.md'
+    markdownPath: '/docs/docker.md'
   }
 ];
 
@@ -114,33 +129,41 @@ export const CoursesSection = () => {
                   sx={{
                     p: 3,
                     flexGrow: 1,
-                    position: 'relative',
                     display: 'grid',
                     gridTemplateRows: 'auto auto',
                     gap: 1.2
                   }}
                 >
-                  <Chip
-                    label={course.badge}
-                    color="primary"
-                    size="small"
+                  <Box
                     sx={{
-                      position: 'absolute',
-                      top: 26,
-                      right: 24,
-                      fontWeight: 700,
-                      minWidth: 132,
-                      height: 32,
-                      fontSize: 13
+                      display: 'grid',
+                      gridTemplateColumns: { xs: '1fr', md: '1fr auto' },
+                      columnGap: { xs: 0, md: 1.5 },
+                      rowGap: 1
                     }}
-                  />
-                  <Typography
-                    variant="h5"
-                    fontSize={{ xs: 24, md: 30 }}
-                    sx={{ minHeight: { xs: 0, md: 108 }, pr: { xs: 0, md: 14 } }}
                   >
-                    {course.title}
-                  </Typography>
+                    <Typography
+                      variant="h5"
+                      fontSize={{ xs: 24, md: 30 }}
+                      sx={{ order: { xs: 1, md: 0 }, minHeight: { xs: 0, md: 108 } }}
+                    >
+                      {course.title}
+                    </Typography>
+                    <Chip
+                      label={course.badge}
+                      color="primary"
+                      size="small"
+                      sx={{
+                        order: { xs: 0, md: 1 },
+                        justifySelf: 'end',
+                        mt: { xs: 0, md: 0.5 },
+                        fontWeight: 700,
+                        minWidth: 132,
+                        height: 32,
+                        fontSize: 13
+                      }}
+                    />
+                  </Box>
                   <Typography
                     color="text.secondary"
                     fontSize={{ xs: 16, md: 18 }}

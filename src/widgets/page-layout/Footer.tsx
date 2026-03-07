@@ -17,11 +17,11 @@ type LegalDocType = 'offer' | 'policy' | null;
 const docsMeta = {
   offer: {
     title: 'Публичная Оферта',
-    path: '/assets/public.md'
+    path: '/docs/public.md'
   },
   policy: {
     title: 'Политика в отношении персональных данных',
-    path: '/assets/policy.md'
+    path: '/docs/policy.md'
   }
 };
 
