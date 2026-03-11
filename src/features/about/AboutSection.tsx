@@ -41,9 +41,9 @@ const teachers = [
     ]
   },
   {
-    name: 'Пинчук Александр',
+    name: 'Александр Пинчук',
     image: '/assets/pinchuk.jpg',
-    manifest: 'Кроссплатформенная отказоустойчивая архитектура как залог стабильности вашего бизнеса.',
+    manifest: 'Надёжная frontend-архитектура как фундамент стабильного цифрового бизнеса.',
     skills: [
       '20+ лет профессионального опыта с JavaScript, HTML, CSS и frontend приложениями.',
       '10+ лет создания production-систем на React/Next.js и Vue/Nuxt.js.',
@@ -132,13 +132,13 @@ export const AboutSection = () => (
                     <Typography variant="h5" fontSize={{ xs: 22, md: 26 }} mb={1}>
                       {teacher.manifest}
                     </Typography>
-                    <Stack spacing={0.8} mb={2}>
+                    <Box component="ul" sx={{ pl: 3, mb: 2, mt: 0 }}>
                       {teacher.skills.map((item) => (
-                        <Typography key={item} color="text.secondary">
-                          • {item}
+                        <Typography key={item} component="li" color="text.secondary" sx={{ mb: 0.6 }}>
+                          {item}
                         </Typography>
                       ))}
-                    </Stack>
+                    </Box>
 
                     <Stack spacing={1}>
                       {teacher.links.map((item) => (
