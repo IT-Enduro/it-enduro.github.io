@@ -67,7 +67,9 @@ const teachers = [
       {
         label: 'StackOverflow',
         href: 'https://stackoverflow.com/users/2525067/alex',
-        icon: <LanguageIcon sx={{ color: '#F48024' }} />
+        icon: (
+          <Box component="img" src="/icons/stackoverflow.svg" alt="" sx={{ width: 20, height: 20, display: 'block' }} />
+        )
       }
     ]
   }
