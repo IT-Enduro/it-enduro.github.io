@@ -21,7 +21,7 @@ const teachers = [
       {
         label: 'Домашняя страница',
         href: 'https://romanow-alex.ru',
-        icon: <LanguageIcon sx={{ color: '#0D60C6' }} />
+        icon: <LanguageIcon sx={{ color: '#328F0B' }} />
       },
       {
         label: 'GitHub',
@@ -70,6 +70,33 @@ const teachers = [
         icon: (
           <Box component="img" src="/icons/stackoverflow.svg" alt="" sx={{ width: 20, height: 20, display: 'block' }} />
         )
+      }
+    ]
+  },
+  {
+    name: 'Екатерина Романова',
+    image: '/assets/romanova.png',
+    manifest: 'Профессиональный коуч, психолог, супервизор.',
+    skills: [
+      'Диплом коуча и бизнес-психолога (МИП).',
+      'Магистратура-аспирантура, научно-исследовательская деятельность по киберпсихологии (МИП).',
+      'Клиническая психология (CBT, 1500+ часов).',
+      'Сертификаты: ICI (Master Coach), ECA, AC.',
+      'Член АРК.',
+      'Супервизор в МИП и РУДН.',
+      '10+ лет в IT, 3+ года в предпринимательстве.',
+      'Автор статей и соавтор альманаха «Грани коучинга» (2025).'
+    ],
+    links: [
+      {
+        label: 'Домашняя страница',
+        href: 'https://kakoi-zapros.ru/',
+        icon: <LanguageIcon sx={{ color: '#328F0B' }} />
+      },
+      {
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/mcathrn/',
+        icon: <LinkedInIcon sx={{ color: '#0A66C2' }} />
       }
     ]
   }
